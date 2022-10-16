@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-decoration-line: none;
+    list-style: none;
+}
+:root{
+    ---navberhd: 'Noto Sans Mono', monospace;
+    ---asidehd: 'Noto Sans Mono', monospace;
+}
+body{
+    background-color: #12475f;
+}
+.df{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+ /*aside styling start  */
+aside{
+    width: auto;
+    height: 100px;
+    background-color: whitesmoke;
+    position: sticky;
+    z-index: 100px;
+}
+aside li{
+    font-family: var(---asidehd);
+    margin: 0px 20px;
+
+}
+.aside a{
+    justify-content: space-between;
+
+}
+.f1 :hover{
+    background-color: red;
+}
+.navber a{
+    font-family: var(---navberhd);
+    font-size: 1em;
+}
+/*aside styling end  */
+ 
+/* header start */
+header h1{
+    font-size: 50px;
+    height: 1.33;
+    position: relative;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    animation:ibtech;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    background-color:  #12475f;
+}
+.container{
+    color: white;
+    max-width: 960px;
+    margin: auto;
+    padding: 0 30px;
+    padding-top: 20px;
+}
+/* header start end */
+
+/* animation ibtech start */
+@keyframes ibtech{
+    0% {top:-50px}
+    100%{top: 0px} 
+}
+/* animation ibtech end*/
+
+#content{
+    position: relative;
+    animation-name:content;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes content{
+    0%{left: -1000px;}
+    100%{left: 0;}
+}
+.btn{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: #fff 1px solid;
+    margin-top: 40px;
+    animation-name:btn;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+
+    transition-property: transform;
+    transition-duration: 1s;
+}
+.btn :hover{
+    transform: rotateY(180deg);
+}
+@keyframes btn{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+section{
+    margin-top: 20px;
+    width: auto;
+    height: 800px;
+    background-color: red;
+}
+section{
+    background-image: url(../image/networking.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation-name: sect;
+    animation-duration: 5s;  
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+}
+@keyframes sect{
+    0%{
+        background-image:url(../image/networking.jpg);
+    }
+    100%{
+        background-image: url(../image/code.jpg);
+    }
+}
+
+.container2{
+    width: auto;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.box{
+    width: 31%;
+    height: 300px;
+    border: 1px solid wheat;
+    box-shadow: inset;
+}
+.box h1{
+    font-family: var(---navberhd);
+}
+.box p{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-family: var(---asidehd);
+}
+.first-btn{
+    margin-top: 20px;
+}
+.btn1{
+    color: var(--red);
+    background-color: var(--white);
+    border: 2px solid  var(--red);
+    padding: 8px 20px;
+    border: 2px solid;
+    background-color: whitesmoke;
+    border-radius: 10px 10px;
+}
+.btn1:hover{
+    color: white;
+    background-color: rgb(103, 7, 7);
+}
+.list-icon{
+    margin-top: 10px;
+    color: white;
+    padding: 5px 120px;
+
+}
+.our h1{
+    color: whitesmoke;
+    font-family: var(---navberhd);
+    font-weight: 200;
+}
+main{
+    width: auto;
+    height: 200px;
+    background-color: #1247 ;
+
+}
+main h1{
+    color: white;
+    text-align: center;
+    font-family: var(---navberhd);
+}
+main p{
+    color: white;
+    text-align: center;
+    font-family: var(---navberhd);
+}
+footer{
+    width: auto;
+    height: 300hv;
+}
+footer h1{
+    text-align: center;
+    font-family: var(---asidehd);
+}
