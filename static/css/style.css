@@ -1,205 +1,139 @@
 *{
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    text-decoration-line: none;
-    list-style: none;
-}
-:root{
-    ---navberhd: 'Noto Sans Mono', monospace;
-    ---asidehd: 'Noto Sans Mono', monospace;
-}
-body{
-    background-color: #12475f;
-}
-.df{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
- /*aside styling start  */
-aside{
-    width: auto;
-    height: 100px;
-    background-color: whitesmoke;
-    position: sticky;
-    z-index: 100px;
-}
-aside li{
-    font-family: var(---asidehd);
-    margin: 0px 20px;
-
-}
-.aside a{
-    justify-content: space-between;
-
-}
-.f1 :hover{
-    background-color: red;
-}
-.navber a{
-    font-family: var(---navberhd);
-    font-size: 1em;
-}
-/*aside styling end  */
- 
-/* header start */
-header h1{
-    font-size: 50px;
-    height: 1.33;
-    position: relative;
-    margin-top: 20px;
-    color: white;
-    text-align: center;
-    animation:ibtech;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    background-color:  #12475f;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
 }
 .container{
-    color: white;
-    max-width: 960px;
-    margin: auto;
-    padding: 0 30px;
-    padding-top: 20px;
-}
-/* header start end */
-
-/* animation ibtech start */
-@keyframes ibtech{
-    0% {top:-50px}
-    100%{top: 0px} 
-}
-/* animation ibtech end*/
-
-#content{
-    position: relative;
-    animation-name:content;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-}
-@keyframes content{
-    0%{left: -1000px;}
-    100%{left: 0;}
-}
-.btn{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    padding: 1rem 2rem;
-    border: #fff 1px solid;
-    margin-top: 40px;
-    animation-name:btn;
-    animation-duration: 3s;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
-
-    transition-property: transform;
-    transition-duration: 1s;
-}
-.btn :hover{
-    transform: rotateY(180deg);
-}
-@keyframes btn{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-
-section{
-    margin-top: 20px;
-    width: auto;
-    height: 800px;
-    background-color: red;
-}
-section{
-    background-image: url(../image/networking.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgb(0,0,0,0.3),transparent), url(../image/backgroup\ line.jpg);
+    /* background-size: cover; */
     background-position: center;
-    animation-name: sect;
-    animation-duration: 5s;  
-    animation-iteration-count: infinite; 
+     padding: 0 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    background: #fff;
+    transition: width 0.3s;
+}
+nav ul li a:hover::after{
+    width: 50%;
+}
+.text-book{
+    color: #fff;
+    position: absolute;
+}
+
+.text-book h1{
+    font-size: 19px;
+    line-height: 90px;
+    /* margin-left: -10px; */
+}
+.text-book h2{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.text-book p{
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 90px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(../image/ttib.jpeg);
+    -webkit-background-clip:text ;
+    background-position:0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{background-position:2000px 0;
+    }
+}  
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.text-book a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+}
+.text-book a span{
+    font-size: 30px;
+    line-height: 15px;
+    margin-left: 5px;
+    color: red;
+}
+.header{
+    width: 100%;
+    height: 90vh;
+    background-image: url(../image/eyes-code.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation-name: header-;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
-@keyframes sect{
+@keyframes header-{
     0%{
-        background-image:url(../image/networking.jpg);
+       background-image: url(../image/heart1.jpg);
+    }
+    20%{
+        background-image: url(../image/world\ 3.jpg);
     }
     100%{
-        background-image: url(../image/code.jpg);
+        background-image:url(../image/eyes-code.jpg);
     }
 }
-
-.container2{
-    width: auto;
-    height: 400px;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+.social-icon{
+  position: absolute;
+  right: 5%;
+  bottom: 8%;
 }
-.box{
-    width: 31%;
-    height: 300px;
-    border: 1px solid wheat;
-    box-shadow: inset;
-}
-.box h1{
-    font-family: var(---navberhd);
-}
-.box p{
-    color: white;
-    text-align: center;
-    margin-top: 10px;
-    font-family: var(---asidehd);
-}
-.first-btn{
-    margin-top: 20px;
-}
-.btn1{
-    color: var(--red);
-    background-color: var(--white);
-    border: 2px solid  var(--red);
-    padding: 8px 20px;
-    border: 2px solid;
-    background-color: whitesmoke;
-    border-radius: 10px 10px;
-}
-.btn1:hover{
-    color: white;
-    background-color: rgb(103, 7, 7);
-}
-.list-icon{
-    margin-top: 10px;
-    color: white;
-    padding: 5px 120px;
-
-}
-.our h1{
-    color: whitesmoke;
-    font-family: var(---navberhd);
-    font-weight: 200;
-}
-main{
-    width: auto;
-    height: 200px;
-    background-color: #1247 ;
-
-}
-main h1{
-    color: white;
-    text-align: center;
-    font-family: var(---navberhd);
-}
-main p{
-    color: white;
-    text-align: center;
-    font-family: var(---navberhd);
-}
-footer{
-    width: auto;
-    height: 300hv;
-}
-footer h1{
-    text-align: center;
-    font-family: var(---asidehd);
+.social-icon a {
+    width: 25px;
+    margin: 25px 25px;
+    color: black;
 }
